@@ -1,0 +1,59 @@
+
+.wrapper {
+   margin: 0 auto;
+   max-width: 960px;
+}
+
+
+main {
+   padding: 1em;
+   background-color: white;
+   }
+
+footer {
+   clear: both;
+   text-align: center;
+   }
+
+header {
+   background-color: #227d59; /* change this to your color choice */
+   display: flex;
+   justify-content: space-between;      align-items: center;
+   padding: 0 1rem; /* or whatever size you prefer */
+   }
+
+header h1 {
+   font-size: 2rem; /* or whatever size you prefer */
+   }
+
+nav ul {
+   list-style-type: none;
+   display: flex;
+   flex-wrap: wrap;
+      }
+
+nav a {
+    padding: 1rem 2rem;
+   text-transform: uppercase;
+   display: block;
+   color: black;
+   text-decoration: none;
+    }
+
+nav a:hover {
+   background-color: #b47f04; /* change this to your color choice */
+   border-radius: 1rem; /* optional and value can be different */
+      }
+
+.logo {
+   max-width: 20%;
+}
+      
+
+
+
+
+
+img {
+   max-width: 100%;
+}
