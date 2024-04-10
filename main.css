@@ -1,7 +1,7 @@
 
 
 body {
-   background-color: #5c4033;
+   background-color: #9a9038;
 }
 
 div.wrapper {
@@ -12,38 +12,10 @@ div.wrapper {
 	background-color: #227d59;
 }
 
-main {
-   padding:1em;
-   background-color: white;
-   }
+/* HEADER */
 
-   main h1 {
-      font-size: 250%;
-      margin: 1em 0;
-   }
 
-   main h2 {
-      font-size: 200%;
-      margin-top: 1em;
-      border-bottom: 2px solid #b47f04;
-   }
 
-   p {
-      font-size: 130%;
-      line-height: 1.4em;
-      margin-top: 1em;
-   }
-
-   .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1em;
-   }
-
-footer {
-   clear: both;
-   text-align: center;
-   }
 
 header {
    background-color: #227d59;
@@ -52,12 +24,22 @@ header {
    flex-wrap: nowrap;
    justify-content: start;
    align-items: center;
-   }
+}
 
 header h1 {
    font-size: 300%;
    color: white;
-   }
+   font-family: "Sorts Mill Goudy", serif;
+}
+
+header img {
+   width: 40%;
+}
+
+   /* NAVIGATION */
+
+
+
 
 nav ul {
    list-style-type: none;
@@ -65,7 +47,7 @@ nav ul {
    flex-wrap: wrap;
    justify-content: space-around;
    border-bottom: 3px solid #b47f04;
-      }
+}
 
 nav li {
    padding: 1rem;
@@ -77,20 +59,78 @@ nav a {
    text-transform: uppercase;
    color: black;
    text-decoration: none;
-    }
+}
 
 nav a:hover {
    background-color: #b47f04;
    border-radius: 5px;
-      }
+}
 
-header img {
-   width: 40%;
+/* MAIN */
+
+
+
+
+main {
+   padding:1em;
+   background-color: white;
+   font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+   
+main h1 {
+   font-size: 250%;
+   margin: 1em 0;
+   font-family: "Sorts Mill Goudy", serif;
+}
+
+main h2 {
+   font-size: 200%;
+   margin-top: 1em;
+   border-bottom: 2px solid #b47f04;
+   font-family: "Sorts Mill Goudy", serif;
+}
+
+p {
+   font-size: 130%;
+   line-height: 1.4em;
+   margin-top: 1em;
 }
 
 main ul {
+      font-size: 130%;
+      line-height: 1.4em;
+}
+
+h3 {
+      font-size: 140%;
+      border-bottom: 1px solid #b47f04;
+      margin: 1em 0;
+      font-family: "Sorts Mill Goudy", serif;
+}
+
+img {
+      max-width: 100%;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+   color: white;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: .5em;
    font-size: 130%;
-   line-height: 1.4em;
+   clear: both;
+   text-align: center;
+}
+
+footer p {
+   font-size: 170%;
+   border-bottom: 2px solid black;
 }
 
 .content {
@@ -98,6 +138,11 @@ main ul {
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1em;
 }
+   
+
+
+
+/* HOME PAGE */
 
 div.welcome {
    grid-column: 1/4;
@@ -135,6 +180,18 @@ div.dineIn {
    grid-column: 1/4;
 }
 
+.photos {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: .5em;
+   align-items: center;
+}
+
+
+
+
+/* ABOUT US */
+
 div.about {
    grid-column: 1/3;
    margin: 0 1em;
@@ -150,34 +207,13 @@ div.facility {
    order: 2;
 }
 
-.photos {
+
+
+
+/* PHOTO GALLERY */
+
+.gallery {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   gap: .5em;
-   align-items: center;
-}
-      
-footer {
-   color: white;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   gap: .5em;
-   font-size: 130%;
-}
-
-footer p {
-   font-size: 170%;
-   border-bottom: 2px solid black;
-}
-
-img {
-   max-width: 100%;
-}
-
-
-
-h3 {
-   font-size: 140%;
-   border-bottom: 1px solid #b47f04;
-   margin: 1em 0;
-}
+   gap: 1em;
+   }
