@@ -102,6 +102,10 @@ main ul {
       line-height: 1.4em;
 }
 
+li {
+   margin: 0 0 .5em 1em;
+}
+
 h3 {
       font-size: 140%;
       border-bottom: 1px solid #b47f04;
@@ -187,7 +191,17 @@ div.dineIn {
    align-items: center;
 }
 
+.aside {
+   background-color: #b47f04;
+   padding: .5em 1em 1em;
+   text-align: center;
+   border: 2px solid #523b17;
+}
 
+.aside h2 {
+   border-bottom: 2px solid #523b17;
+   margin-bottom: .5em;
+}
 
 
 /* ABOUT US */
@@ -216,4 +230,11 @@ div.facility {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1em;
+
    }
+
+.gallery img:hover {
+   transform: scale(1.5);
+   transition: all 1.5s ease;
+   box-shadow: 3px 3px 5px black;
+}
