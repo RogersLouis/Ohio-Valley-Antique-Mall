@@ -153,6 +153,7 @@ div.welcome {
    grid-row: 1/2;
 }
 
+
 div.offer {
    grid-column: 1/4;
    grid-row: 2/3;
@@ -233,8 +234,23 @@ div.facility {
 
    }
 
-.gallery img:hover {
+div:is(.gallery) img {
+   box-shadow: 0 10px 10px -10px black;
+   transition: all 2s ease;
+   animation: picfade 1.5s ease 1s backwards;
+
+}
+
+div:is(.gallery, .gallery-square) img:hover {
    transform: scale(1.5);
-   transition: all 1.5s ease;
-   box-shadow: 3px 3px 5px black;
+   position: relative;
+   z-index: 2;
+   border-radius: 0;
+   box-shadow: 0 20px 30px black;
+}
+
+.gallery:hover img:not(:hover) {
+   transform: scale(.9);
+   opacity: 30%;
+   filter: blur(3px);
 }
