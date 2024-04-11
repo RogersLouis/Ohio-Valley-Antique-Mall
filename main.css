@@ -66,6 +66,11 @@ nav a:hover {
    border-radius: 5px;
 }
 
+header input.menu-btn,
+header label.menu-icon {
+    display: none; /* ← hides hamburger icon */
+}
+
 /* MAIN */
 
 
@@ -240,32 +245,104 @@ div.facility {
 
 /* PHOTO GALLERY */
 
+
 .gallery {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   gap: 1em;
-background-color: #b47f04;
-padding: 1em;
+   padding: 1em 0;
 margin-top: 1em;
+}
+
+/* RESPONSIVE LAYOUT */
+
+
+@media only screen and (max-width: 768px) {
+
+   header {
+       flex-direction: column;
+       position: relative;
+   }
+   
+   /* ↓ Navbar ↓ */
+   header nav ul.menu {
+       max-height: 0;
+       transition: max-height .5s ease-out; /* ← open speed */
+       text-align: center;
+       flex-direction: column;
+   }
+   
+   /* ↓ Navbar buttons ↓ */
+   header nav ul.menu li a {
+       
    }
 
-div:is(.gallery) img {
-   box-shadow: 0 10px 10px -10px black;
-   transition: all 2s ease;
-   animation: picfade 1.5s ease 1s backwards;
 
-}
+   
+/* Hamburger Icon 
+-------------------------------------*/
+   header label.menu-icon {
+       display: inline-block;
+       padding: 20px 20px;
+       position: absolute;
+       right: 0; /* ← horizontal position */
+       top: 3px; /* ← vertical position */
+   }
 
-div:is(.gallery, .gallery-square) img:hover {
-   transform: scale(1.5);
-   position: relative;
-   z-index: 2;
-   border-radius: 0;
-   box-shadow: 0 20px 30px black;
-}
+   /* ↓ center hamburger line ↓ */
+   header label.menu-icon span.navicon {
+       display: block;
+       position: relative;
+       transition: all .2s ease-out;
+       height: 5px; /* ← thickness of lines */
+       width: 25px; /* ← width of lines */
+       background: black; /* ← icon color */
+   }
 
-.gallery:hover img:not(:hover) {
-   transform: scale(.9);
-   opacity: 30%;
-   filter: blur(3px);
+   /* ↓ top & bottom hamburger line ↓ */
+   header label.menu-icon .navicon:before,
+   header label.menu-icon .navicon:after {
+       content: '';
+       display: block;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       transition: all .3s ease-out;
+       background: black; /* ← icon color */
+   }
+
+   header label.menu-icon .navicon:before {
+       top: 9px; /* ← space below top line */
+   }
+
+   header label.menu-icon .navicon:after {
+       top: -9px; /* ← space above bottom line */
+   }
+
+
+/* Icon Animation
+-------------------------------------*/
+   header input.menu-btn:checked ~ ul.menu {
+       max-height: 300px;
+       /* ↑ maximum height of the menu bar ↑
+            increase this if some of your
+            menu links are getting cut off */
+   }
+
+   /* ↓ hides center line for the X ↓ */
+   header input.menu-btn:checked ~ label.menu-icon span.navicon {
+       background: transparent;
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon span.navicon:before {
+       transform: rotate(-45deg);
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon span.navicon:after {
+       transform: rotate(45deg);
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:before,
+   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
+       top: 0;
+   }
+
+
 }
