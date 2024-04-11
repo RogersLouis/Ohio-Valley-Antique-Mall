@@ -137,13 +137,19 @@ footer p {
    border-bottom: 2px solid black;
 }
 
+footer a {
+   color: white;
+}
+
 .content {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1em;
 }
    
-
+.slider {
+   margin: 1em 0;
+}
 
 
 /* HOME PAGE */
@@ -197,11 +203,16 @@ div.dineIn {
    padding: .5em 1em 1em;
    text-align: center;
    border: 2px solid #523b17;
+   color: white;
 }
 
 .aside h2 {
    border-bottom: 2px solid #523b17;
    margin-bottom: .5em;
+}
+
+.dineIn img {
+   margin-top: 1em;
 }
 
 
@@ -225,13 +236,17 @@ div.facility {
 
 
 
+
+
 /* PHOTO GALLERY */
 
 .gallery {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1em;
-
+background-color: #b47f04;
+padding: 1em;
+margin-top: 1em;
    }
 
 div:is(.gallery) img {

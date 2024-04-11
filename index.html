@@ -10,7 +10,11 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="slick.css">
+<link rel="stylesheet" href="slick-theme.css">
 </head>
+
 <body>
    <div class="wrapper">
       <header>
@@ -81,14 +85,13 @@
          </div>
 
 </div>
-      
-         <div class="photos">
-            <img src="images/books-and-print1.jpg" alt="">
-            <img src="images/collectibles3.jpeg" alt="">
-            <img src="images/furniture1.jpg" alt="">
-            <img src="images/seasonal2.jpeg" alt="">
-            <img src="images/vintage-styles9.jpeg" alt="">
-         </div>
+             <div class="slider demo">
+                <div><img src="images/books-and-print1.jpeg" alt=""></div>
+                <div><img src="images/collectibles3.jpeg" alt=""></div>
+                <div><img src="images/furniture1.jpeg" alt=""></div>
+                 <div><img src="images/seasonal2.jpeg" alt=""></div>
+                 <div><img src="images/vintage-styles9.jpeg" alt=""></div>
+             </div>
 
       </main>
 
@@ -105,8 +108,10 @@
          <div>
             <p>Location</p>
             <small>
-               7285 Dixie Highway (Route 4)
-               Fairfield, OH 45014
+               <a href="https://www.google.com/maps/dir//7285+Dixie+Hwy,+Fairfield,+OH+45014/@39.3072231,-84.5716415,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88404efb03cc56d7:0xa3a57bec3cd7f4ae!2m2!1d-84.4892406!2d39.3072521?entry=ttu">
+                  7285 Dixie Highway (Route 4)
+                  Fairfield, OH 45014
+               </a>
             </small>
          </div>
 
@@ -121,6 +126,26 @@
       </footer>
       
    </div>
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="slick.js"></script>
+
+<script>
+   $(document).ready(function(){
+      $('.demo').slick();
+    });
+
+    $('.demo').slick({
+      dots: false,
+      accessibility:true,
+      swipe:true,
+      touchMove:true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      });
+
+</script>
 
 </body>
 </html>
