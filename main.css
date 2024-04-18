@@ -2,6 +2,7 @@
 
 body {
    background-color: #9a9038;
+   background-image: url("images/climpek.png");
 }
 
 div.wrapper {
@@ -132,14 +133,15 @@ footer {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: .5em;
-   font-size: 130%;
+   font-size: 120%;
    clear: both;
    text-align: center;
 }
 
 footer p {
-   font-size: 170%;
+   font-size: 140%;
    border-bottom: 2px solid black;
+   margin-bottom: .5em;
 }
 
 footer a {
