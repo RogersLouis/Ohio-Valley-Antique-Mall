@@ -20,27 +20,22 @@ div.wrapper {
 
 header {
    background-color: #227d59;
+   background-image: url("images/OVAM-logo-icon.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: top left;
    padding: 0 1rem;
-   display: flex;
-   flex-wrap: nowrap;
-   justify-content: start;
-   align-items: center;
 }
 
 header h1 {
    font-size: 300%;
    color: white;
    font-family: "Sorts Mill Goudy", serif;
-}
-
-header img {
-   width: 50%;
+   margin: 2rem 0;
+   text-align: end;
 }
 
    /* NAVIGATION */
-
-
-
 
 nav ul {
    list-style-type: none;
