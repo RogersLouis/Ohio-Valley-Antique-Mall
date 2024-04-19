@@ -24,14 +24,13 @@ header {
    background-repeat: no-repeat;
    background-size: contain;
    background-position: top left;
-   padding: 0 1rem;
+   padding: 2rem 1rem;
 }
 
 header h1 {
    font-size: 300%;
    color: white;
    font-family: "Sorts Mill Goudy", serif;
-   margin: 2rem 0;
    text-align: end;
 }
 
@@ -62,9 +61,9 @@ nav a:hover {
    border-radius: 5px;
 }
 
-header input.menu-btn,
-header label.menu-icon {
-    display: none; /* ← hides hamburger icon */
+ header input.menu-btn,
+ header label.menu-icon {
+    display: none;
 }
 
 /* MAIN */
@@ -246,100 +245,4 @@ div.facility {
 .gallery {
    padding: 1em 0;
 margin-top: 1em;
-}
-
-/* RESPONSIVE LAYOUT */
-
-
-@media only screen and (max-width: 768px) {
-
-   header {
-       flex-direction: column;
-       position: relative;
-   }
-   
-   /* ↓ Navbar ↓ */
-   header nav ul.menu {
-       max-height: 0;
-       transition: max-height .5s ease-out; /* ← open speed */
-       text-align: center;
-       flex-direction: column;
-   }
-   
-   /* ↓ Navbar buttons ↓ */
-   header nav ul.menu li a {
-       
-   }
-
-
-   
-/* Hamburger Icon 
--------------------------------------*/
-   header label.menu-icon {
-       display: inline-block;
-       padding: 20px 20px;
-       position: absolute;
-       right: 0; /* ← horizontal position */
-       top: 3px; /* ← vertical position */
-   }
-
-   /* ↓ center hamburger line ↓ */
-   header label.menu-icon span.navicon {
-       display: block;
-       position: relative;
-       transition: all .2s ease-out;
-       height: 5px; /* ← thickness of lines */
-       width: 25px; /* ← width of lines */
-       background: black; /* ← icon color */
-   }
-
-   /* ↓ top & bottom hamburger line ↓ */
-   header label.menu-icon .navicon:before,
-   header label.menu-icon .navicon:after {
-       content: '';
-       display: block;
-       height: 100%;
-       width: 100%;
-       position: absolute;
-       transition: all .3s ease-out;
-       background: black; /* ← icon color */
-   }
-
-   header label.menu-icon .navicon:before {
-       top: 9px; /* ← space below top line */
-   }
-
-   header label.menu-icon .navicon:after {
-       top: -9px; /* ← space above bottom line */
-   }
-
-
-/* Icon Animation
--------------------------------------*/
-   header input.menu-btn:checked ~ ul.menu {
-       max-height: 300px;
-       /* ↑ maximum height of the menu bar ↑
-            increase this if some of your
-            menu links are getting cut off */
-   }
-
-   /* ↓ hides center line for the X ↓ */
-   header input.menu-btn:checked ~ label.menu-icon span.navicon {
-       background: transparent;
-   }
-
-   header input.menu-btn:checked ~ label.menu-icon span.navicon:before {
-       transform: rotate(-45deg);
-   }
-
-   header input.menu-btn:checked ~ label.menu-icon span.navicon:after {
-       transform: rotate(45deg);
-   }
-
-   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:before,
-   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
-       top: 0;
-   }
-
-
 }

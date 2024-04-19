@@ -1,0 +1,339 @@
+div.wrapper {
+   margin: 0 auto;
+   max-width: 960px;
+   border-top: solid 5px #227d59;
+	background-color: #227d59;
+}
+
+/* HEADER */
+
+
+header {
+   background-color: #227d59;
+   background-image: url("images/OVAM-logo-icon.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: top left;
+   padding: 3rem;
+   margin: .5rem 0;
+}
+
+header h1 {
+   font-size: 170%;
+   color: white;
+   font-family: "Sorts Mill Goudy", serif;
+   text-align: end;
+   margin-right: .5em;
+}
+
+header input.menu-btn,
+ header label.menu-icon {
+    display: none;
+}
+
+/* NAVIGATION */
+   
+nav {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   text-align: center;
+   overflow: hidden;
+}
+
+nav input.menu-btn,
+ nav label.menu-icon {
+    display: none;
+}
+
+/* ↓ Navbar ↓ */
+nav ul {
+   border-bottom: 3px solid #b47f04;
+}
+
+nav li {
+   padding: 1rem;
+   list-style-type: none;
+}
+
+nav a {
+    padding: 1rem 2rem;
+   text-transform: uppercase;
+   color: black;
+   text-decoration: none;
+}
+
+nav a:hover {
+   background-color: #b47f04;
+   border-radius: 5px;
+}
+
+nav ul.menu {
+    max-height: 0;
+    transition: max-height .5s ease-out; /* ← open speed */
+    flex-direction: column;
+}
+
+/* ↓ Navbar buttons ↓ */
+ nav ul.menu li a {
+
+}
+
+/* Hamburger Icon 
+-------------------------------------*/
+header label.menu-icon {
+    display: inline-block;
+    padding: 20px 20px;
+    position: absolute;
+    right: 0; /* ← horizontal position */
+    top: 3px; /* ← vertical position */
+}
+
+/* ↓ center hamburger line ↓ */
+header label.menu-icon span.navicon {
+    display: block;
+    position: relative;
+    transition: all .2s ease-out;
+    height: 5px; /* ← thickness of lines */
+    width: 25px; /* ← width of lines */
+    background: black; /* ← icon color */
+}
+
+/* ↓ top & bottom hamburger line ↓ */
+header label.menu-icon .navicon:before,
+header label.menu-icon .navicon:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .3s ease-out;
+    background: black; /* ← icon color */
+}
+
+header label.menu-icon .navicon:before {
+    top: 9px; /* ← space below top line */
+}
+
+header label.menu-icon .navicon:after {
+    top: -9px; /* ← space above bottom line */
+}
+
+/* Icon Animation
+-------------------------------------*/
+header input.menu-btn:checked ~ nav ul.menu {
+    max-height: 300px;
+    /* ↑ maximum height of the menu bar ↑
+         increase this if some of your
+         menu links are getting cut off */
+}
+
+/* ↓ hides center line for the X ↓ */
+header input.menu-btn:checked ~ label.menu-icon span.navicon {
+    background: transparent;
+}
+
+header input.menu-btn:checked ~ label.menu-icon span.navicon:before {
+    transform: rotate(-45deg);
+}
+
+header input.menu-btn:checked ~ label.menu-icon span.navicon:after {
+    transform: rotate(45deg);
+}
+
+header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:before,
+header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* MAIN */
+
+
+
+
+main {
+   padding: .5em;
+   background-color: white;
+   font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+   
+main h1 {
+   font-size: 300%;
+   margin: .5em 0;
+   font-family: "Sorts Mill Goudy", serif;
+   text-align: center;
+}
+
+main h2 {
+   font-size: 200%;
+   margin-top: .5em;
+   border-bottom: 2px solid #b47f04;
+   font-family: "Sorts Mill Goudy", serif;
+}
+
+p {
+   font-size: 140%;
+   line-height: 1.5em;
+   margin-top: .5em;
+}
+
+main ul {
+      font-size: 140%;
+      line-height: 1.5em;
+}
+
+li {
+   margin: 0 0 .5em 1em;
+}
+
+h3 {
+      font-size: 140%;
+      border-bottom: 1px solid #b47f04;
+      margin: .5em 0;
+      font-family: "Sorts Mill Goudy", serif;
+}
+
+img {
+      max-width: 100%;
+}
+
+.content {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: .5em;
+}
+   
+.slider {
+   margin: .5em 0;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+   color: white;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: .5em;
+   font-size: 120%;
+   clear: both;
+   text-align: center;
+}
+
+footer p {
+   font-size: 140%;
+   border-bottom: 2px solid black;
+   margin: .5em 0;
+}
+
+footer a {
+   color: white;
+}
+
+
+/* HOME PAGE */
+
+div.welcome {
+   grid-column: 1/2;
+   grid-row: 1/2;
+}
+
+
+div.offer {
+   grid-column: 1/2;
+   grid-row: 2/3;
+}
+
+div.loading {
+   grid-column: 1/2;
+   grid-row: 3/4;
+   margin: 0 1em;
+}
+
+div.personal {
+   grid-column: 1/2;
+   grid-row: 4/4;
+   margin: 0 1em;
+}
+
+div.gift {
+   grid-column: 1/2;
+   grid-row: 5/6;
+}
+
+div.misc {
+   grid-column: 1/2;
+   grid-row: 6/7;
+}
+
+div.dineIn {
+   grid-column: 1/2;
+}
+
+.photos {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: .5em;
+   align-items: center;
+}
+
+.aside {
+   background-color: #b47f04;
+   padding: .5em 1em 1em;
+   text-align: center;
+   border: 2px solid #523b17;
+   color: white;
+}
+
+.aside h2 {
+   border-bottom: 2px solid #523b17;
+   margin-bottom: .5em;
+}
+
+.dineIn img {
+   margin-top: 1em;
+}
+
+
+/* ABOUT US */
+
+div.about {
+   grid-column: 1/2;
+   margin: 0 1em;
+}
+
+div.history {
+   grid-column: 1/2;
+}
+
+div.facility {
+   grid-column: 1/2;
+   grid-row: 3/4;
+}
+
+
+
+
+
+
+/* PHOTO GALLERY */
+
+
+.gallery {
+   padding: 1em 0;
+margin-top: 1em;
+}
+
+@media screen and (max-width: 500px) {
+   
+   header {
+      background-position: center;
+   }
+
+   header h1 {
+      display: none;
+   }
+}
