@@ -2,6 +2,7 @@ div.wrapper {
    margin: 0 auto;
    max-width: 960px;
    border-top: solid 5px #227d59;
+   border-bottom: solid 5px #227d59;
 	background-color: #227d59;
 }
 
@@ -11,10 +12,12 @@ div.wrapper {
 header {
    background-color: #227d59;
    background-image: url("images/OVAM-logo-icon.png");
-   background-size: contain;
+   background-size: 100px;
    background-repeat: no-repeat;
    background-position: top left;
-   padding: 3rem;
+   flex-direction: column;
+   position: relative;
+   padding: 3rem 3rem 1rem 3rem;
    margin: .5rem 0;
 }
 
@@ -39,6 +42,7 @@ nav {
    position: relative;
    text-align: center;
    overflow: hidden;
+   padding-top: 1em;
 }
 
 nav input.menu-btn,
@@ -48,12 +52,13 @@ nav input.menu-btn,
 
 /* ↓ Navbar ↓ */
 nav ul {
-   border-bottom: 3px solid #b47f04;
+   /* border-bottom: 3px solid #b47f04; */
 }
 
 nav li {
    padding: 1rem;
    list-style-type: none;
+   font-size: 130%;
 }
 
 nav a {
@@ -68,9 +73,10 @@ nav a:hover {
    border-radius: 5px;
 }
 
-nav ul.menu {
+header nav {
     max-height: 0;
     transition: max-height .5s ease-out; /* ← open speed */
+    text-align: center;
     flex-direction: column;
 }
 
@@ -82,68 +88,69 @@ nav ul.menu {
 /* Hamburger Icon 
 -------------------------------------*/
 header label.menu-icon {
-    display: inline-block;
-    padding: 20px 20px;
-    position: absolute;
-    right: 0; /* ← horizontal position */
-    top: 3px; /* ← vertical position */
+   display: inline-block;
+   padding: 20px 20px;
+   position: absolute;
+   right: 0; /* ← horizontal position */
+   top: 3px; /* ← vertical position */
 }
 
 /* ↓ center hamburger line ↓ */
 header label.menu-icon span.navicon {
-    display: block;
-    position: relative;
-    transition: all .2s ease-out;
-    height: 5px; /* ← thickness of lines */
-    width: 25px; /* ← width of lines */
-    background: black; /* ← icon color */
+   display: block;
+   position: relative;
+   transition: all .2s ease-out;
+   height: 5px; /* ← thickness of lines */
+   width: 25px; /* ← width of lines */
+   background: black; /* ← icon color */
 }
 
 /* ↓ top & bottom hamburger line ↓ */
 header label.menu-icon .navicon:before,
 header label.menu-icon .navicon:after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: all .3s ease-out;
-    background: black; /* ← icon color */
+   content: '';
+   display: block;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   transition: all .3s ease-out;
+   background: black; /* ← icon color */
 }
 
 header label.menu-icon .navicon:before {
-    top: 9px; /* ← space below top line */
+   top: 9px; /* ← space below top line */
 }
 
 header label.menu-icon .navicon:after {
-    top: -9px; /* ← space above bottom line */
+   top: -9px; /* ← space above bottom line */
 }
+
 
 /* Icon Animation
 -------------------------------------*/
-header input.menu-btn:checked ~ nav ul.menu {
-    max-height: 300px;
-    /* ↑ maximum height of the menu bar ↑
-         increase this if some of your
-         menu links are getting cut off */
+header input.menu-btn:checked ~ nav {
+   max-height: 250px;
+   /* ↑ maximum height of the menu bar ↑
+        increase this if some of your
+        menu links are getting cut off */
 }
 
 /* ↓ hides center line for the X ↓ */
 header input.menu-btn:checked ~ label.menu-icon span.navicon {
-    background: transparent;
+   background: transparent;
 }
 
 header input.menu-btn:checked ~ label.menu-icon span.navicon:before {
-    transform: rotate(-45deg);
+   transform: rotate(-45deg);
 }
 
 header input.menu-btn:checked ~ label.menu-icon span.navicon:after {
-    transform: rotate(45deg);
+   transform: rotate(45deg);
 }
 
 header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:before,
 header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
-    top: 0;
+   top: 0;
 }
 
 /* MAIN */
@@ -194,7 +201,7 @@ h3 {
       font-family: "Sorts Mill Goudy", serif;
 }
 
-img {
+main img {
       max-width: 100%;
 }
 
@@ -224,9 +231,9 @@ footer {
 }
 
 footer p {
-   font-size: 140%;
-   border-bottom: 2px solid black;
-   margin: .5em 0;
+   font-size: 160%;
+   /* border-bottom: 2px solid black; */
+   margin: .5em 0 0 0;
 }
 
 footer a {
@@ -250,23 +257,23 @@ div.offer {
 div.loading {
    grid-column: 1/2;
    grid-row: 3/4;
-   margin: 0 1em;
 }
 
 div.personal {
    grid-column: 1/2;
    grid-row: 4/4;
-   margin: 0 1em;
 }
 
 div.gift {
    grid-column: 1/2;
    grid-row: 5/6;
+   margin-bottom: .5em;
 }
 
 div.misc {
    grid-column: 1/2;
    grid-row: 6/7;
+   margin-bottom: 1em;
 }
 
 div.dineIn {
@@ -307,11 +314,13 @@ div.about {
 
 div.history {
    grid-column: 1/2;
+   margin-top: 1em;
 }
 
 div.facility {
    grid-column: 1/2;
    grid-row: 3/4;
+   margin-bottom: 1em;
 }
 
 
@@ -324,10 +333,10 @@ div.facility {
 
 .gallery {
    padding: 1em 0;
-margin-top: 1em;
+   margin-top: 1em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 460px) {
    
    header {
       background-position: center;
