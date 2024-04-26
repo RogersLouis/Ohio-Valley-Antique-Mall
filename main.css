@@ -51,13 +51,15 @@ nav li {
 nav a {
     padding: 1rem 2rem;
    text-transform: uppercase;
-   color: black;
+   color: white;
    text-decoration: none;
+   font-size: 110%;
 }
 
 nav a:hover {
    background-color: #b47f04;
    border-radius: 5px;
+   color: black;
 }
 
  header input.menu-btn,
@@ -71,7 +73,7 @@ nav a:hover {
 
 
 main {
-   padding:1em;
+   padding: 1.5em;
    background-color: white;
    font-family:Georgia, 'Times New Roman', Times, serif
 }
@@ -129,10 +131,11 @@ footer {
    font-size: 120%;
    clear: both;
    text-align: center;
+   padding-bottom: 1em;
 }
 
 footer p {
-   font-size: 140%;
+   font-size: 150%;
    border-bottom: 2px solid black;
    margin-bottom: .5em;
 }

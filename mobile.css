@@ -159,7 +159,7 @@ header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
 
 
 main {
-   padding: .5em;
+   padding: 1.5em;
    background-color: white;
    font-family:Georgia, 'Times New Roman', Times, serif
 }
@@ -225,15 +225,15 @@ footer {
    display: grid;
    grid-template-columns: 1fr;
    gap: .5em;
-   font-size: 120%;
+   font-size: 130%;
    clear: both;
    text-align: center;
+   padding-bottom: 1.5em;
 }
 
 footer p {
    font-size: 160%;
-   /* border-bottom: 2px solid black; */
-   margin: .5em 0 0 0;
+   margin: 1em 0 0 0;
 }
 
 footer a {
